@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import { typesValidator } from "./validator";
 
-const Head = ({ title, description, image, type = "website" }) => {
+export const Head = ({ title, description, image, type = "website" }) => {
   const pageTitle = `${title} | Blog Posts`;
   const metaImage = () => (image ? image : "Default image url");
 
@@ -51,5 +51,3 @@ Head.propTypes = {
   image: PropTypes.string,
   type: PropTypes.oneOf(typesValidator),
 };
-
-export default Head;
